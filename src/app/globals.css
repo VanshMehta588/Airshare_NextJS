@@ -1,0 +1,151 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap'); */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.bg-grad {
+  background: linear-gradient(180deg, #C6DCFF 50%, #E9E9E9 90%);
+}
+
+.bg-grad2 {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 90%);
+}
+
+.bg-grad3 {
+  background: #FFFFFF;
+}
+
+
+.font-1 {
+  color: #0C2045 !important;
+}
+
+.font-2 {
+  color: #21478D !important;
+}
+
+
+
+
+
+.navbar-section {
+  z-index: 1030;
+  background-color: #C6DCFF;
+  /* Adjust as needed */
+}
+
+.scrolledshadow {
+  box-shadow: 0 3px 5px gray;
+
+}
+
+.navbar-nav .nav-link {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.display-4 {
+  line-height: 1.2;
+}
+
+
+.bg-darkblue {
+  background-color: #0C2045 !important;
+}
+
+.star-border {
+  border-color: #0C2045;
+}
+
+.bg-darkblue:hover {
+  opacity: 0.8;
+}
+
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.card-button {
+  width: 250px;
+  height: 60px;
+}
+
+.hero-button:hover {
+  opacity: 0.7;
+}
+
+
+
+/* .card {
+  transition: transform 0.2s;
+} */
+
+/* .card:hover {
+  transform: translateY(-5px);
+} */
+
+.newsmedia {
+  position: absolute;
+  bottom: -50px;
+  left: 100px;
+  right: 100px;
+}
+
+
+
+.customdiv1 {
+  position: relative;
+}
+
+.forspace {
+  height: 50px;
+}
+
+
+.accordion-button::after {
+  display: none;
+}
+
+/* .accordion-button:not(.collapsed) {
+  background-color: white;
+} */
+
+.footer-bg {
+  background-color: #5A9AFF;
+}
+
+.mf-cursor {
+  /* transform: scale(5,5) !important; */
+  color: #0C2045;
+}
+
+.mf-cursor-text {
+  /* font-family: "Permanent Marker", serif; */
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 715px) {
+  /* .customdiv1 {
+    position: static;
+  } */
+
+  .newsmedia {
+    width: 100% !important;
+    /* position: static; */
+    left: 10px;
+    right: 10px;
+    bottom: -35px;
+    overflow: hidden;
+  }
+
+  .forspace {
+    height: 50px;
+  }
+}

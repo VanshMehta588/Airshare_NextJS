@@ -109,7 +109,7 @@ export default function PlatformDetails() {
                             </div>
                         </Col>
                         <Col md={4} className="py-2 text-center">
-                            <h3 className="h5 mb-3 font-1">What's new:</h3>
+                            <h3 className="h5 mb-3 font-1">What&apos;s new:</h3>
                             <ol className="font-2 mb-0">
                                 {platformDetails[activePlatform].whatsnew.map((item, index) => (
                                     <li key={index} className="mb-2">

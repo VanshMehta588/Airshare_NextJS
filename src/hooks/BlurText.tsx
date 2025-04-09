@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState, RefObject, FC } from 'react';
-import { useSprings, animated, SpringRef } from '@react-spring/web';
+import { useRef, useEffect, useState, FC } from 'react';
+import { useSprings, animated } from '@react-spring/web';
 import '../styles/Blurtext.css';
 
 interface BlurTextProps {
@@ -11,14 +11,16 @@ interface BlurTextProps {
 export const BlurText: FC<BlurTextProps> = ({ text, delay = 200, className = '' }) => {
   const words: string[] = text.split(' ');
   const [inView, setInView] = useState<boolean>(false);
-  const ref: RefObject<HTMLParagraphElement> = useRef<HTMLParagraphElement>(null);
+  const ref = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const observer: IntersectionObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          observer.unobserve(ref.current!); // Unobserve after triggering the animation
+          if (ref.current) {
+            observer.unobserve(ref.current);
+          }
         }
       },
       { threshold: 0.1 }
@@ -36,7 +38,7 @@ export const BlurText: FC<BlurTextProps> = ({ text, delay = 200, className = '' 
     words.map((_, i) => ({
       from: { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,-50px,0)' },
       to: inView
-        ? async (next: SpringRef) => {
+        ? async (next) => {
             await next({ filter: 'blur(5px)', opacity: 0.5, transform: 'translate3d(0,5px,0)' });
             await next({ filter: 'blur(0px)', opacity: 1, transform: 'translate3d(0,0,0)' });
           }

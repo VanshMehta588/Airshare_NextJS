@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image'; // Importing Next.js Image component for optimization
 import { useEffect } from 'react';
-import { useGSAP } from '@gsap/react';
+// import { useGSAP } from '@gsap/react';
 import feature1 from '@/assets/airshare_features_1.svg';
 import feature2 from '@/assets/airshare_features_2.svg';
 import feature3 from '@/assets/airshare_features_3.svg';

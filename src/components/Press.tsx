@@ -33,7 +33,10 @@ export default function Press() {
         const marqueeWrapper = wrapperRef.current
         if (!marqueeWrapper) return
 
-        const totalWidth = Array.from(marqueeWrapper.children).reduce((acc, item: any) => acc + item.offsetWidth, 0)
+const totalWidth = Array.from(marqueeWrapper.children).reduce(
+    (acc, item) => acc + (item as HTMLElement).offsetWidth,
+    0
+)
 
         gsap.to(marqueeWrapper, {
             x: `-=${totalWidth / 2}`,
